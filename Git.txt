@@ -1,4 +1,4 @@
-GIT
+﻿GIT
 O GIT é um sistema distribuído de versionamento de código que foi desenvolvido em 2005 pela comunidade de desenvolvimento do Linux com a ideia de se tornar um sistema padrão de versionamento de código
 
 Suas principais características são:
@@ -8,7 +8,7 @@ Design simples
 Suporte para desenvolvimento não lineares
 Completamente Distribuído
 Capaz de cuidas de projetos de larga escala como o próprio Linux kernel com eficiência
-A principal diferença entre o GIT e os outros VCS é a maneira que o GIT “pensa” sobre os dados[e
+A principal diferença entre o GIT e os outros VCS é a maneira que o GIT “pensa” sobre os dados.
 
 O GIT trabalha versionando os arquivos como series de snapshots, com GIT toda vez que você faz um commit ou salva os dados do seu projeto, o git “cria uma imagem” dos arquivos do seu commit, para aumentar a eficiência
 
@@ -19,6 +19,41 @@ Staged : Quando um arquivo esta staged significa que ele foi marcado para ser �
 Committed : Esse termo significa que o arquivo já foi commitado e esta seguramente armazenado no seu repositorio local, virando um novo snapshot
 Além desses estados citados acima, ainda existe o estado untracked que significa que um arquivo é novo ou alterado, porem ainda não foi adicionado ao repositorio anteriormente
 
+Repositório
+O primeiro é o repositório, local físico onde os arquivos e suas cópias ficarão 
+armazenados, o repositório pode ser local ou remoto.
+ git init para iniciar um novo repositório
+   
+   Branch
+Branches são os ramos, cópias do código original que podem ser manipuladas de forma 
+livre, sem afetar as funcionalidades em produção no código-fonte.
+Isso permite que todas as alterações sejam realizadas de forma segura, sem que erros 
+ocorram na cópia principal do projeto.
+ git checkout -b " nome da nova branch " - permite criar e mudar uma nova branch
+ git branch - permite listar e ver qual branch está ativa
+ git checkout " nome da branch " - permite mudar para uma nova branch
+ git pull - atualiza a branch atualmente ativa
+ git push - envia atualizações para as nuvens na branch ativa.
+
+   Merge
+Após a finalização de um trabalho em um Branch, é necessário realizar o Merge, fundir a 
+cópia e seus arquivos modificados com o ramo principal do projeto.
+ git merge " branch a receber o merge " - permite fazer o merge com a branch ativa
+ atualmente com outra branch.
+
+  Push Request
+O Push Request é o envio das modificações após o Merge para o repositório central, para que 
+todas as outras pessoas que atuam no desenvolvimento possam atualizar suas cópias e revisar o 
+código criado, verificando conflitos com seus próprios trabalhos.
+
+   Pull Request
+O Pull Request é utilizado quando outra pessoa que atua no desenvolvimento muda o ramo 
+principal no repositório central, puxando as modificações realizadas para a sua máquina, 
+fundindo a nova versão com o seu código local.
+ 
+ Fork
+Trata-se do comando de cópia de um repositório remoto para a máquina local, realizado sempre 
+que vamos começar a trabalhar em um projeto que já existe.
 
 Comandos
 
